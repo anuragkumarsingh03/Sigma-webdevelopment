@@ -13,8 +13,9 @@ It performs wrong opration of the 10% times.
 
 let random = Math.random()
 let a = prompt("Enter First number : ");
-let b = prompt("Enter Second number : ");
 let c = prompt("Enter operation : ");
+let b = prompt("Enter Second number : ");
+
 
 let obj = {
     "=" : "-",
@@ -25,5 +26,10 @@ let obj = {
 
 
 if(random>0.1){
-
+    console.log(`The result is ${a} ${c} ${b}`);
+    alert(`The result is ${eval(`&{a} ${c} ${b}`)}`);
+}
+else{
+    c = obj[c]
+    alert(`The result is ${eval(`&{a} ${c} ${b}`)}`);
 }
